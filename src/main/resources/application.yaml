@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: packetAnalyze
+  task:
+    execution:
+      pool:
+        max-size: 64
+        core-size: 8
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  servlet:
+    multipart:
+      maxFileSize: 1000MB
+      maxRequestSize: 1000MB
+
+server:
+  port: 8070
+
+logging:
+  level:
+    root: INFO
+    org.pcap4j.core.PcapDumper: INFO
+
+springdoc:
+  swagger-ui:
+    doc-expansion: none
+    display-request-duration: true
