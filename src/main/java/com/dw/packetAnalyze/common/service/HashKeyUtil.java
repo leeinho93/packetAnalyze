@@ -1,6 +1,5 @@
-package com.dw.packetAnalyze.packetAnalyze.common.service;
+package com.dw.packetAnalyze.common.service;
 
-import java.util.Arrays;
 import java.util.zip.CRC32;
 
 public class HashKeyUtil {

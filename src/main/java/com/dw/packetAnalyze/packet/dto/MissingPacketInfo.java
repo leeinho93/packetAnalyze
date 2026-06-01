@@ -1,4 +1,4 @@
-package com.dw.packetAnalyze.packetAnalyze.packet.dto;
+package com.dw.packetAnalyze.packet.dto;
 
 import java.sql.Timestamp;
 import lombok.Getter;

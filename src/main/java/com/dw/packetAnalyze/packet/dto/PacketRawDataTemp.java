@@ -1,8 +1,8 @@
-package com.dw.packetAnalyze.packetAnalyze.packet.dto;
+package com.dw.packetAnalyze.packet.dto;
 
-import com.dw.packetAnalyze.packetAnalyze.common.service.HashKeyUtil;
-import com.dw.packetAnalyze.packetAnalyze.common.service.UtilService;
-import com.dw.packetAnalyze.packetAnalyze.packet.domain.EProtocol;
+import com.dw.packetAnalyze.common.service.HashKeyUtil;
+import com.dw.packetAnalyze.common.service.UtilService;
+import com.dw.packetAnalyze.packet.domain.EProtocol;
 import java.sql.Timestamp;
 import java.util.Locale;
 import java.util.Map;

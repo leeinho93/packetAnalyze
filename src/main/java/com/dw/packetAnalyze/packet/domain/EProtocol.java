@@ -1,4 +1,4 @@
-package com.dw.packetAnalyze.packetAnalyze.packet.domain;
+package com.dw.packetAnalyze.packet.domain;
 
 import lombok.Getter;
 

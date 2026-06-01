@@ -1,4 +1,4 @@
-package com.dw.packetAnalyze.packetAnalyze;
+package com.dw.packetAnalyze;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

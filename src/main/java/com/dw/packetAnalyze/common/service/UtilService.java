@@ -1,4 +1,4 @@
-package com.dw.packetAnalyze.packetAnalyze.common.service;
+package com.dw.packetAnalyze.common.service;
 
 import java.io.File;
 import java.net.InetAddress;

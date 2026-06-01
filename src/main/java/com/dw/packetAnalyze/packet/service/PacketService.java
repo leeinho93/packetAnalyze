@@ -1,8 +1,8 @@
-package com.dw.packetAnalyze.packetAnalyze.packet.service;
+package com.dw.packetAnalyze.packet.service;
 
-import com.dw.packetAnalyze.packetAnalyze.common.service.UtilService;
-import com.dw.packetAnalyze.packetAnalyze.packet.dto.MissingPacketInfo;
-import com.dw.packetAnalyze.packetAnalyze.packet.dto.PacketRawDataTemp;
+import com.dw.packetAnalyze.common.service.UtilService;
+import com.dw.packetAnalyze.packet.dto.MissingPacketInfo;
+import com.dw.packetAnalyze.packet.dto.PacketRawDataTemp;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;

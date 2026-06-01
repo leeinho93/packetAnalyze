@@ -1,9 +1,9 @@
-package com.dw.packetAnalyze.packetAnalyze.packet.controller;
+package com.dw.packetAnalyze.packet.controller;
 
 import static org.springframework.http.MediaType.MULTIPART_FORM_DATA_VALUE;
 
-import com.dw.packetAnalyze.packetAnalyze.packet.dto.MissingPacketInfo;
-import com.dw.packetAnalyze.packetAnalyze.packet.service.PacketService;
+import com.dw.packetAnalyze.packet.dto.MissingPacketInfo;
+import com.dw.packetAnalyze.packet.service.PacketService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.io.IOException;
