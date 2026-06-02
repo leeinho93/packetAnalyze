@@ -47,11 +47,13 @@ public class PacketService {
     PcapHandle aHandle = Pcaps.openOffline(targetPath);
     try {
       Packet packet;
+      int no = 0;
       while ((packet = aHandle.getNextPacket()) != null) {
+        no++;
         try {
           PacketRawDataTemp temp = new PacketRawDataTemp(packet, "target", aHandle.getTimestamp());
           if (!bKeys.contains(temp.getUniqueKey())) {
-            missing.add(new MissingPacketInfo(temp));
+            missing.add(new MissingPacketInfo(no, temp.getTimestamp()));
           }
         } catch (Exception e) {
           logger.debug("target 패킷 파싱 실패 (스킵): {}", e.getMessage());
@@ -75,7 +77,7 @@ public class PacketService {
 
       Sheet sheet = workbook.createSheet("Missing Packets");
 
-      String[] headers = {"SeqNo", "No", "Src", "Dst", "Protocol", "Timestamp", "Length"};
+      String[] headers = {"No", "Timestamp"};
       Row headerRow = sheet.createRow(0);
       for (int i = 0; i < headers.length; i++) {
         headerRow.createCell(i).setCellValue(headers[i]);
@@ -84,13 +86,8 @@ public class PacketService {
       for (int i = 0; i < missing.size(); i++) {
         MissingPacketInfo info = missing.get(i);
         Row row = sheet.createRow(i + 1);
-        row.createCell(0).setCellValue(info.getSeqNo());
-        row.createCell(1).setCellValue(i + 1);
-        row.createCell(2).setCellValue(info.getSrc());
-        row.createCell(3).setCellValue(info.getDst());
-        row.createCell(4).setCellValue(info.getProtocol());
-        row.createCell(5).setCellValue(info.getTimestamp().toString());
-        row.createCell(6).setCellValue(info.getLength());
+        row.createCell(0).setCellValue(info.getNo());
+        row.createCell(1).setCellValue(info.getTimestamp().toString());
       }
 
       workbook.write(out);
